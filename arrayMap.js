@@ -8,18 +8,18 @@ const Animals = [
 ]
 
 
-// raditional map method.
+//Traditional map method.
 
-// function animalMap(array) {
-//     let animalMapArray = [];
-//     for (let i = 0; i < array.length; i++) {
-//         animalMapArray.push(array[i].name);
-//     }
-//     return animalMapArray;
-// }
+function animalMap(array) {
+    let animalMapArray = [];
+    for (let i = 0; i < array.length; i++) {
+        animalMapArray.push(array[i].name);
+    }
+    return animalMapArray;
+}
 
-// let animalNames = animalMap(Animals);
-// console.log(animalNames);
+let animalNames = animalMap(Animals);
+console.log(animalNames);
 
 
 
@@ -27,6 +27,6 @@ const Animals = [
 // 3 lines of code for the same problem.
 
 function animalNamesMap(array) {
-    return array.map(arrayCell => (arrayCell.name));
+    return array.map(arrayCell => arrayCell.name)
 };
-console.log(animalNamesMap(Animals));
+console.log(animalNamesMap(Animals))
