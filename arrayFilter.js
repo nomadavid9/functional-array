@@ -21,5 +21,6 @@ const Animals = [
 
 function dogFilter2(array) {
     return array.filter(arrayCell => arrayCell.species === "dog")
+        .map(arrayCell => arrayCell.name + " is a " + arrayCell.species)
 }
 console.log(dogFilter2(Animals))

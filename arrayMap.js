@@ -1,14 +1,14 @@
 const animals = [
-    { name: "Fluffykins", species: "rabbit" },
-    { name: "Caro", species: "dog" },
+    { name: "Peeta", species: "rabbit" },
+    { name: "Shadow", species: "dog" },
     { name: "Hamilton", species: "dog" },
     { name: "Harold", species: "fish" },
-    { name: "Ursula", species: "cat" },
+    { name: "Garfield", species: "cat" },
     { name: "Jimmy", species: "fish" }
 ]
 
 
-//Traditional map method.
+//Traditional "map" method.
 
 // function animalMap(array) {
 //     let animalMapArray = [];
@@ -24,12 +24,17 @@ const animals = [
 
 
 
-//
+//Takes the array elements, filters out the fish and then maps certain strings depending on the species of the animal.
 
 
 function animalFilterMap(array) {
-    return array.filter(arrayCell => arrayCell.species !== "cat")
-        .map(arrayCell => arrayCell.name + " is a " + arrayCell.species)
+    return array.filter(arrayCell => arrayCell.species !== "fish")
+        .map(arrayCell =>
+            (arrayCell.species === "rabbit") ?
+            arrayCell.name + " is a silly " + arrayCell.species :
+            (arrayCell.species === "cat") ?
+            " and " + arrayCell.name + " is a \ngrumpy " + arrayCell.species + "." :
+            " " + arrayCell.name + " is a good boy").toString()
 
 };
 console.log(animalFilterMap(animals))
