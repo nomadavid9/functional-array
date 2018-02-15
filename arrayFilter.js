@@ -7,14 +7,19 @@ const Animals = [
     { name: "Jimmy", species: "fish" }
 ]
 
-function dogFilter(array) {
-    let dogArray = []
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].species === "dog") {
-            dogArray.push(array[i].name);
-        }
-    }
-    return dogArray;
-}
+// function dogFilter(array) {
+//     let dogArray = []
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i].species === "dog") {
+//             dogArray.push(array[i].name);
+//         }
+//     }
+//     return dogArray;
+// }
 
-console.log(dogFilter(Animals));
+// console.log(dogFilter(Animals));
+
+function dogFilter2(array) {
+    return array.filter(arrayCell => arrayCell.species === "dog")
+}
+console.log(dogFilter2(Animals))
