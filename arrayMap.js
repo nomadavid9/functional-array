@@ -8,6 +8,8 @@ const Animals = [
 ]
 
 
+// raditional map method.
+
 function animalMap(array) {
     let animalMapArray = [];
     for (let i = 0; i < array.length; i++) {
@@ -16,6 +18,15 @@ function animalMap(array) {
     return animalMapArray;
 }
 
-
 let animalNames = animalMap(Animals);
 console.log(animalNames);
+
+
+
+
+// 3 lines of code for the same problem.
+
+let animalArray = [];
+const animalMapArray2 = Animals.map(arrayCell => animalArray.push(arrayCell.name));
+
+console.log(animalArray);
